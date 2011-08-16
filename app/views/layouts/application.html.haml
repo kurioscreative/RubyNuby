@@ -1,0 +1,13 @@
+!!! 5
+
+= render :partial => 'layouts/head'
+%body{ :lang => 'en', :class => "#{controller.controller_name}" }
+  #container
+    %header
+      = render :partial => 'layouts/header'
+    #content
+      = render :partial => 'layouts/flashes'
+      #breadcrumbs
+      = yield
+    %footer
+      = render :partial => 'layouts/footer'
